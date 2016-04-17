@@ -22,7 +22,9 @@ public class ManageTestTable {
 	   public boolean saveOrUpdate(TestTable table) {
 	      try {
 	         session = HibernateUtil.getSessionFactory().openSession();
+	         session.beginTransaction();
 	         session.saveOrUpdate(table);
+	         session.getTransaction().commit();
 	      } catch (HibernateException e) {
 	         e.printStackTrace();
 	         return false;

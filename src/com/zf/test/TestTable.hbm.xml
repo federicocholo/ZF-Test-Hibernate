@@ -1,18 +1,13 @@
 <?xml version="1.0"?>
-   <!DOCTYPE hibernate-configuration PUBLIC
-    "-//Hibernate/Hibernate Configuration DTD//EN"
-    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
 <hibernate-mapping>
    <class name="com.zf.test.TestTable" table="TestTable">
-   <id name="keyIndex" type="java.lang.Integer">
-		<column name="keyIndex" />
+   <id name="keyIndex" column="keyIndex" type="java.lang.Integer">
 		<generator class="identity" />
    </id>
-   <property name="text" type="java.lang.String">
-      <column name="text" />
-   </property>
-   <property name="date" type="java.util.Date">
-      <column name="date" />
-   </property>
+   <property name="text" column="text" type="java.lang.String" />
+   <property name="date" column="date" type="java.util.Date"/>
    </class>
 </hibernate-mapping>

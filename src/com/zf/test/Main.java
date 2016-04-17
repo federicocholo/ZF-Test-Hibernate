@@ -8,7 +8,7 @@ public class Main {
 		
 		// Add record to table
 		TestTable table = new TestTable();
-		table.setText("Test Text");
+		table.setText("Test Text3");
 		table.setDate(new Date());
 		
 		mtt.saveOrUpdate(table);

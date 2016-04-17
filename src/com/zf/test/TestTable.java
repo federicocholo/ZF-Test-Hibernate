@@ -3,6 +3,9 @@ package com.zf.test;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class TestTable implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private int keyIndex = 0;
